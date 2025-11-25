@@ -225,6 +225,25 @@ footer {
     background-color: rgba(80,130,255,0.7);
 }
 
+.googleButton {
+    position: fixed;      /* 화면 하단에 고정 */
+    bottom: 20px;         /* 화면 하단에서 20px 위 */
+    left: 50%;            /* 화면 가로 중앙 */
+    transform: translateX(-50%); /* 정확히 중앙 맞춤 */
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 1000;        /* 다른 요소 위에 표시 */
+}
+
+.googleButton:hover {
+    background-color: #0056b3;
+}
+
 
 </style>
 </head>
@@ -246,6 +265,9 @@ footer {
     <div class="box">
         같은 상황이나 말도, 사람들은 <b>귀인의 방향</b>에 따라 다르게 해석합니다.<br>
         이 차이는 인간관계에서 오해와 갈등을 만들 수 있습니다.
+    </div>
+        <div class="qr-box">
+    <img src="leenohhak.jpg" alt="이미지">
     </div>
 </section>
 
@@ -302,9 +324,6 @@ footer {
         4. “오늘 피곤했겠지.”
     </div>
 
-    <div class="qr-box">
-    <img src="leenohhak.jpg" alt="이미지">
-    </div>
 </section>
 
 
@@ -316,6 +335,7 @@ footer {
         <div class="box"><b>외부-안정</b><br>근원적 불만, 거리두기</div>
         <div class="box"><b>외부-불안정</b><br>자연스럽게 넘어갈 수도 !</div>
     </div>
+    <button class="googleButton">구글 폼 열기</button>
 </section>
 
 <section>
@@ -340,10 +360,6 @@ footer {
         3. “그 동네가 원래 늘 막혀.”<br>
         4. “오늘 갑자기 비 와서 길이 막혔나봐.”
     </div>
-
-    <div class="qr-box">
-    <img src="leenohhak.jpg" alt="이미지">
-    </div>
 </section>
 
 
@@ -355,6 +371,7 @@ footer {
         <div class="box"><b>외부-안정</b><br>친구 개인을 탓하기보다는 구조적 문제로 인식</div>
         <div class="box"><b>외부-불안정</b><br>마음의 동요 ↓, 다음 약속을 잡을 때도 영향 ↓</div>
     </div>
+    <button class="googleButton">구글 폼 열기</button>
 </section>
 
 <section>
@@ -365,10 +382,8 @@ footer {
         3. “교수님 원래 스타일이시지.”<br>
         4. “오늘 교수님 컨디션이 좋으신 날인가봐.”
     </div>
+    <button class="googleButton">구글 폼 열기</button>
 
-    <div class="qr-box">
-    <img src="leenohhak.jpg" alt="이미지">
-    </div>
 </section>
 
 <section>
@@ -379,6 +394,7 @@ footer {
         <div class="box"><b>외부-안정</b><br>멘탈은 안정적 but 피드백을 깊이 반영하지 못할 가능성 有</div>
         <div class="box"><b>외부-불안정</b><br>큰 의미를 두지 않고 금방 넘기기</div>
     </div>
+    <button class="googleButton">구글 폼 열기</button>
 </section>
 
 <section>
@@ -420,6 +436,7 @@ prevBtn.addEventListener('click', () => {
     if (currentSlide < 0) currentSlide = slides.length - 1;
     slides[currentSlide].classList.add('active');
 });
+
 // 키보드 이벤트
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') {
@@ -428,8 +445,23 @@ document.addEventListener('keydown', (e) => {
         prevBtn.click();
     }
 });
-    
+
+const googleButtons = document.querySelectorAll('.googleButton');
+googleButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        window.open(
+            "https://docs.google.com/forms/d/12f594msUhkuO42VZDzKPbALUuXjDuOQyVJWUcIv8QYI/edit?ts=6923f746#responses",
+            "_blank"
+        );
+    });
+});
+
+
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
