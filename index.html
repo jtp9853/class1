@@ -420,6 +420,15 @@ prevBtn.addEventListener('click', () => {
     if (currentSlide < 0) currentSlide = slides.length - 1;
     slides[currentSlide].classList.add('active');
 });
+// 키보드 이벤트
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        nextBtn.click();
+    } else if (e.key === 'ArrowLeft') {
+        prevBtn.click();
+    }
+});
+    
 </script>
 
 </body>
