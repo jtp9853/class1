@@ -63,6 +63,17 @@ h2 { font-size: 32px; }
     border-radius: 10px;
     text-align: center;
     font-size: 20px;
+
+    width: 140px;      /* 추가: 박스 크기 줄이기 */
+    margin-left: auto; /* 추가 */
+    margin-right: auto;/* 가운데 정렬 */
+}
+
+.qr-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    touch-action: pinch-zoom; /* 모바일 확대/축소 허용 */
 }
 
 footer {
@@ -173,6 +184,9 @@ footer {
     to   { transform: translateY(-2000px); }
 }
 
+
+
+
 /* ---------------------- 버튼 ---------------------- */
 #nextBtn, #prevBtn {
     position: fixed;
@@ -195,6 +209,8 @@ footer {
     left: 20px;
     background-color: rgba(80,130,255,0.7);
 }
+
+
 </style>
 </head>
 
@@ -256,7 +272,7 @@ footer {
             width="100%" 
             height="315" 
             src="https://www.youtube.com/embed/hqwhiGPNFW8" 
-            title="YouTube video player" 
+            title="4:48-5:20" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen>
@@ -271,7 +287,9 @@ footer {
         4. “오늘 피곤했겠지.”
     </div>
 
-    <div class="qr-box">📌 지금 QR을 찍고 설문조사에 참여해주세요!</div>
+    <div class="qr-box">
+    <img src="leenohhak.jpg" alt="이미지">
+    </div>
 </section>
 
 
@@ -308,7 +326,9 @@ footer {
         4. “오늘 비 와서 늦었겠지.”
     </div>
 
-    <div class="qr-box">📌 지금 QR을 찍고 설문조사에 참여해주세요!</div>
+    <div class="qr-box">
+    <img src="leenohhak.jpg" alt="이미지">
+    </div>
 </section>
 
 
@@ -330,6 +350,10 @@ footer {
         3. “교수님 원래 스타일이지.”<br>
         4. “오늘 교수님 기분 좋으신가보네.”
     </div>
+
+    <div class="qr-box">
+    <img src="leenohhak.jpg" alt="이미지">
+    </div>
 </section>
 
 <section>
@@ -341,6 +365,7 @@ footer {
         <div class="box"><b>외부-불안정</b><br>컨디션 해석</div>
     </div>
 </section>
+
 
 <footer>© 감정 번역기 PPT (HTML/CSS)</footer>
 
@@ -377,3 +402,4 @@ prevBtn.addEventListener('click', () => {
 
 </body>
 </html>
+
