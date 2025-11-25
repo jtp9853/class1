@@ -178,6 +178,21 @@ footer {
     1700px 700px #e5f4ff;
 }
 
+/* 마지막 슬라이드 텍스트 천천히 등장 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s forwards 0.5s; /* 0.5초 지연 후 실행 */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* 별 흐르는 효과 */
 @keyframes animStar {
     from { transform: translateY(0px); }
@@ -242,8 +257,8 @@ footer {
     <div class="grid-2">
         <div class="box">
             <h3>① 내부 vs 외부 귀인</h3>
-            • 내부: 성격·의도 → ‘그 사람 때문’<br>
-            • 외부: 상황·환경 → ‘상황 때문’
+            • 내부: 성격 → ‘그 사람 때문’<br>
+            • 외부: 환경 → ‘상황 때문’
         </div>
         <div class="box">
             <h3>② 안정 vs 불안정 귀인</h3>
@@ -256,10 +271,10 @@ footer {
 <section>
     <h2>4가지 귀인 유형 요약</h2>
     <div class="grid-2">
-        <div class="box"><b>내부 + 안정</b><br>“그 애는 원래 나한테 무관심해.”<br>→ 관계 위협감 증가</div>
-        <div class="box"><b>내부 + 불안정</b><br>“지금 나에게 실망한 것 같아.”<br>→ 자책·감정적 반응</div>
-        <div class="box"><b>외부 + 안정</b><br>“요즘 바빠서 그래.”<br>→ 상황 이해</div>
-        <div class="box"><b>외부 + 불안정</b><br>“오늘만 타이밍이 안 맞았어.”<br>→ 융통성 있음</div>
+        <div class="box"><b>내부 + 안정</b><br>“원래 나는 이런 사람이야.” → 열등감, 관계 회피<br>→ 열등감, 관계 회피</div>
+        <div class="box"><b>내부 + 불안정</b><br>“내가 오늘만 상태가 안 좋았던 것 같아.” <br>→ 후회, 행동 수정</div>
+        <div class="box"><b>외부 + 안정</b><br>“원래 그 직무는 시간 여유가 없어.”<br>→ 체념, 기대 조절</div>
+        <div class="box"><b>외부 + 불안정</b><br>“오늘만 운이 나빴던 거겠지.”<br>→ 관계적 부담 감소, 융통성</div>
     </div>
 </section>
 
@@ -296,10 +311,10 @@ footer {
 <section>
     <h2>해석 유형 설명</h2>
     <div class="grid-2">
-        <div class="box"><b>내부-안정</b><br>자신감 ↓, 표현 감소</div>
-        <div class="box"><b>내부-불안정</b><br>후회 → 행동 수정</div>
-        <div class="box"><b>외부-안정</b><br>짜증·거리두기</div>
-        <div class="box"><b>외부-불안정</b><br>자연스럽게 넘어감</div>
+        <div class="box"><b>내부-안정</b><br>표현 감소, 소극적 → 정신적 여과</div>
+        <div class="box"><b>내부-불안정</b><br>아쉬움 → 행동 수정 및 변화 시도</div>
+        <div class="box"><b>외부-안정</b><br>근원적 불만, 거리두기</div>
+        <div class="box"><b>외부-불안정</b><br>자연스럽게 넘어갈 수도 !</div>
     </div>
 </section>
 
@@ -321,9 +336,9 @@ footer {
 
     <div class="box">
         1. “원래 시간 개념이 없지.”<br>
-        2. “오늘 늦게 준비했나?”<br>
-        3. “그 지역은 원래 막혀.”<br>
-        4. “오늘 비 와서 늦었겠지.”
+        2. “오늘따라 준비했나?”<br>
+        3. “그 동네가 원래 늘 막혀.”<br>
+        4. “오늘 갑자기 비 와서 길이 막혔나봐.”
     </div>
 
     <div class="qr-box">
@@ -335,10 +350,10 @@ footer {
 <section>
     <h2>해석 유형 설명</h2>
     <div class="grid-2">
-        <div class="box"><b>내부-안정</b><br>친구 성향 탓</div>
-        <div class="box"><b>내부-불안정</b><br>일시적 실수</div>
-        <div class="box"><b>외부-안정</b><br>환경적 요인</div>
-        <div class="box"><b>외부-불안정</b><br>하루의 변수</div>
+        <div class="box"><b>내부-안정</b><br>친구의 지각을 반복 가능성 높게 인식 → 행위자-관찰자 편향 오류</div>
+        <div class="box"><b>내부-불안정</b><br>친구의 지각을 일회성으로 인식 → 용서 가능성 ↑</div>
+        <div class="box"><b>외부-안정</b><br>친구 개인을 탓하기보다는 구조적 문제로 인식</div>
+        <div class="box"><b>외부-불안정</b><br>마음의 동요 ↓, 다음 약속을 잡을 때도 영향 ↓</div>
     </div>
 </section>
 
@@ -346,9 +361,9 @@ footer {
     <h2>상황 3: 교수님 피드백</h2>
     <div class="box">
         1. “나는 원래 실력이 부족해서…”<br>
-        2. “오늘 대충 발표했나?”<br>
-        3. “교수님 원래 스타일이지.”<br>
-        4. “오늘 교수님 기분 좋으신가보네.”
+        2. “내가 오늘 대충 발표했나?”<br>
+        3. “교수님 원래 스타일이시지.”<br>
+        4. “오늘 교수님 컨디션이 좋으신 날인가봐.”
     </div>
 
     <div class="qr-box">
@@ -359,10 +374,17 @@ footer {
 <section>
     <h2>해석 유형 설명</h2>
     <div class="grid-2">
-        <div class="box"><b>내부-안정</b><br>위축, 감정적 추리 주의</div>
-        <div class="box"><b>내부-불안정</b><br>개선 행동으로 연결</div>
-        <div class="box"><b>외부-안정</b><br>말투 스타일로 이해</div>
-        <div class="box"><b>외부-불안정</b><br>컨디션 해석</div>
+        <div class="box"><b>내부-안정</b><br>위축 → 감정적 추리, 독심술적 사고</div>
+        <div class="box"><b>내부-불안정</b><br>아쉬움 → 행동 수정</div>
+        <div class="box"><b>외부-안정</b><br>멘탈은 안정적 but 피드백을 깊이 반영하지 못할 가능성 有</div>
+        <div class="box"><b>외부-불안정</b><br>큰 의미를 두지 않고 금방 넘기기</div>
+    </div>
+</section>
+
+<section>
+    <div class="box fade-in" style="text-align: center; font-size: 32px; line-height: 1.6; max-width: 800px; margin: auto;">
+        “아, 이건 내가 어떤 <b>귀인 프레임</b>을 쓰고 있는 건가?”<br><br>
+        이 한 번의 생각이 여러분의 <b>관계</b>를 지키는 작은 방패가 될 수도 있습니다 🙂
     </div>
 </section>
 
@@ -402,4 +424,3 @@ prevBtn.addEventListener('click', () => {
 
 </body>
 </html>
-
